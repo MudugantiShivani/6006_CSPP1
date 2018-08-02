@@ -15,24 +15,24 @@ If you've spent more than a few hours on this problem, we suggest that you move 
 If you have time, come back to this problem after you've had a break and cleared your head.'''
 
 def main():
-	"""
-	we have to print the longest substring which is in sequence from the given string
-	"""
-	s_i = input()
-	max_sub = []
-	for i in range(len(s_i)):
-		sub_str = s_i[i]
-		count_var = 0
-		while i+1<len(s_i) and s_i[i]<=s_i[i+1]:
-			count_var += 1
-			i += 1
-			sub_str += s_i[i]
-		if len(sub_str)>len(max_sub):
-			max_sub = sub_str
-	print(max_sub)
-	# the input string is in s
-	# remove pass and start your code here
-	pass
+    """
+    we have to print the longest substring which is in sequence from the given string
+    """
+    s_i = input()
+    max_sub = []
+    for i in range(len(s_i)):
+        sub_str = s_i[i]
+        count_var = 0
+        while i+1<len(s_i) and s_i[i]<=s_i[i+1]:
+            count_var += 1
+            i += 1
+            sub_str += s_i[i]
+        if len(sub_str)>len(max_sub):
+            max_sub = sub_str
+    print(max_sub)
+    # the input string is in s
+    # remove pass and start your code here
+    pass
 
 if __name__ == "__main__":
-	main()
+    main()
