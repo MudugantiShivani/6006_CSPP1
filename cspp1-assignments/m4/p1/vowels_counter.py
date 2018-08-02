@@ -20,5 +20,5 @@ def main():
     print(count_i)
     # the input string is in s
     # remove pass and start your code here
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
