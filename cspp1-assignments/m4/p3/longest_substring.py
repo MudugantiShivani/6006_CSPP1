@@ -22,7 +22,7 @@ def main():
     """
     s_i = input()
     max_sub = []
-    for i in range(len(s_i)):
+    for i, _ in enumerate(s_i):
         sub_str = s_i[i]
         count_var = 0
         while i+1 < len(s_i) and s_i[i] <= s_i[i+1]:
