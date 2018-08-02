@@ -15,8 +15,8 @@ def main():
     
     ss_int = s_int.lower()
     count_i = 0
-    for CHAR in ss_int:
-        if CHAR in('a', 'e', 'i', 'o', 'u'):
+    for char_i in ss_int:
+        if char_i in('a', 'e', 'i', 'o', 'u'):
             count_i += 1
     print(count_i)
     # the input string is in s
