@@ -10,8 +10,10 @@
 # Output: 21950 is not a perfect cube
 
 def main():
+    """we have to find whether the given number is perfect cube or not
+    """
     # input is captured in s
-    cube_num=int(input())
+    cube_num = int(input())
     epsilon = 0.01
     inc = 1
     guess = 0
