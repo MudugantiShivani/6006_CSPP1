@@ -15,7 +15,7 @@ def main():
     here we find the square root of given number using approximation method
     """
     x_i = int(input())
-    epsilon = 0.01
+    epsilon =0.01
     step = 0.1
     guess = 0.0
 
