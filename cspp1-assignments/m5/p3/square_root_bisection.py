@@ -14,7 +14,7 @@ def main():
     we have to find the square root of given number by bisection method
     """
     num = int(input())
-    epsilon = 0.1
+    epsilon = 0.01
     low = 0.0
     high = num
     mid = (low + high)/2.0
