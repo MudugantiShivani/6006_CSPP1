@@ -18,6 +18,6 @@ def main():
     guess = x_i/2.0
     while abs(guess*guess - x_i) >= epsilon:
         guess = guess - (((guess**2) - x_i)/(2*guess))
-    print(str(guess))   
+    print(str(guess)) 
 if __name__ == "__main__":
     main()
