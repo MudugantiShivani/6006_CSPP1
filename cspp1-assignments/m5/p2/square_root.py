@@ -1,4 +1,5 @@
-# Write a python program to find the square root of the given number
+
+"""# Write a python program to find the square root of the given number
 # using approximation method
 
 # testcase 1
@@ -8,26 +9,28 @@
 # testcase 2
 # input: 49
 # output: 6.999999999999991
-
+"""
 def main():
-    x=int(input())
+    """
+    here we find the square root of given number using approximation method
+    """
+    x_i = int(input())
     epsilon = 0.01
     step = 0.1
     guess = 0.0
 
-    while abs(guess**2-x) >= epsilon:
-        if guess <= x:
+    while abs(guess**2-x_i) >= epsilon:
+        if guess <= x_i:
             guess += step
         else:
             break
 
-    if abs(guess**2 - x) >= epsilon:
+    if abs(guess**2 - x_i) >= epsilon:
         print('failed')
     else:
         print(str(guess))
     # epsilon and step are initialized
     # don't change these values
     # your code starts here
-
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
