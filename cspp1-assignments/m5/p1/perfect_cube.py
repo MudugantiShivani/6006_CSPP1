@@ -23,9 +23,9 @@ def main():
             guess += inc
 
     if abs(guess**3 - cube_num) >= epsilon:
-        print('failed')
+        print(str(cube_num) + " is not a perfect cube")
     else:
-        print(cube_num)
+        print(str(cube_num) + " is a perfect cube")
     # watch out for the data type of value stored in s
     # your code starts here
 
