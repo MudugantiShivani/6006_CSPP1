@@ -14,7 +14,7 @@ def main():
     we have to find the square root of given number by newton raphson method
     """
     x_i = int(input())
-    epsilon =0.01
+    epsilon = 0.01
     guess = x_i/2.0
     while abs(guess*guess - x_i) >= epsilon:
         guess = guess - (((guess**2) - x_i)/(2*guess))
