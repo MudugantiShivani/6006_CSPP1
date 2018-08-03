@@ -25,7 +25,7 @@ def main():
     if abs(guess**3 - cube_num) >= epsilon:
         print('failed')
     else:
-        print(str(guess))
+        print(cube_num)
     # watch out for the data type of value stored in s
     # your code starts here
 
