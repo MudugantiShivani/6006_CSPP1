@@ -15,7 +15,7 @@ def main():
     """
     # input is captured in s
     cube_num = int(input())
-    epsilon =0.01
+    epsilon = 0.01
     inc = 1
     guess = 0
 
