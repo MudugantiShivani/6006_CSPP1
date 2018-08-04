@@ -6,7 +6,9 @@ For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the
 '''
 def main():
     '''
-    Read number from the input, store it in variable num.
+    Read number from the input, and if the number is divisible by 3 then it
+    should print Fizz,if it divides with 5 then Buzz ,if it divides with
+    both 3 and 5 then it should print FizzBuzz
     '''
     num = int(input())
     for i in range(1,num+1):
@@ -19,10 +21,5 @@ def main():
     		print("Buzz")
     	else:
     		print(i)	
-
-    		
-
-
-    	
-if __name__ == "__main__":
+__name__ == "__main__":
     main()
