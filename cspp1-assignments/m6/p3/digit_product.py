@@ -12,6 +12,6 @@ def main():
     if int_input == "0":
         print("0")
     else:
-        print("0")  
+        print("0")
 if __name__ == "__main__":
     main()
