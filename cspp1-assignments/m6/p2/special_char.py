@@ -7,11 +7,10 @@ def main():
     '''
     Read string from the input, store it in variable str_input.
     '''
-    string =input()
-    for CHAR in string:
-        if CHAR in('!', '@', '#', '$', '%','^','&','*'):
-            string=string.replace(CHAR," ")
+    string = input()
+    for char_i in string:
+        if char_i in('!', '@', '#', '$', '%', '^', '&', '*'):
+            string = string.replace(CHAR," ")
     print(string) 
-
 if __name__ == "__main__":
     main()
