@@ -9,9 +9,17 @@ def main():
     Read any number from the input, store it in variable int_input.
     '''
     int_input = int(input())
-    if int_input == "0":
+    rem=0
+    final=1
+    if int_input == 0:
         print("0")
-    else:
-        print("0")
+    elif int_input>0:
+        while (int_input>0):
+            rem=int_input%10
+            int_input=int_input//10
+            final=final*rem
+    print(final) 
+
+
 if __name__ == "__main__":
     main()
