@@ -14,7 +14,7 @@ def main():
     if int_input == "0":
         print("0")
     elif int_input > 0:
-        while (int_input > 0):
+        while int_input > 0:
             rem = int_input%10
             int_input = int_input//10
             final = final*rem
