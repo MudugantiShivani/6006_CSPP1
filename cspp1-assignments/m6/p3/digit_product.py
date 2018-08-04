@@ -9,6 +9,8 @@ def main():
     Read any number from the input, store it in variable int_input.
     '''
     int_input = int(input())
+    if int_input ==0
+    print("0")
 
 
 if __name__ == "__main__":
