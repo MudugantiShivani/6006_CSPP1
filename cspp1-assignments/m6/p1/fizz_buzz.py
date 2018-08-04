@@ -11,7 +11,7 @@ def main():
     both 3 and 5 then it should print FizzBuzz
     '''
     num = int(input())
-    for i in range(1,num+1):
+    for i in range(1, num+1):
         if i%3 == 0 and i%5 == 0:
             print("Fizz")
             print("Buzz")
@@ -20,6 +20,6 @@ def main():
         elif i%5 == 0:
             print("Buzz")
         else:
-            print(i)    
+            print(i)
 if __name__ == "__main__":
     main()
