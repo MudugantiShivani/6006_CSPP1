@@ -18,6 +18,6 @@ def main():
             rem = int_input%10
             int_input = int_input//10
             final = final*rem
-    print(final)
+    	print(final)
 if __name__ == "__main__":
     main()
