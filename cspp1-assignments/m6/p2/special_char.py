@@ -5,7 +5,7 @@ Output has three spaces, which are to be replaced with these special characters
 '''
 def main():
     '''
-    Read string from the input, store it in variable str_input.
+    Read the string and replace all the specisl characters with space
     '''
     string = input()
     for char_i in string:
