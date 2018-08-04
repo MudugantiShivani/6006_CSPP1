@@ -13,16 +13,16 @@ def main():
     rem = 0
     final = 1
     if int_input < 0:
-        int_input = s-(int_input)
+        int_input = -(int_input)
     while int_input > 1:
         rem = int_input%10
         int_input = int_input//10
         final = final*rem
-    if a>0:
+    if a > 0:
         print(final)
-    if a==0:
+    if a == 0:
         print(rem)
-    if a<0:
+    if a < 0:
         print(-final)
 if __name__ == "__main__":
     main()
