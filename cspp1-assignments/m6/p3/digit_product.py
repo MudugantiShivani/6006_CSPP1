@@ -6,7 +6,7 @@ example:
 '''
 def main():
     '''
-    Read any number from the input, store it in variable int_input.
+    Read any number from the input and print the product of digits
     '''
     int_input = int(input())
     rem=0
@@ -15,11 +15,9 @@ def main():
         print("0")
     elif int_input>0:
         while (int_input>0):
-            rem=int_input%10
-            int_input=int_input//10
-            final=final*rem
-    print(final) 
-
-
+            rem = int_input%10
+            int_input = int_input//10
+            final = final*rem
+    print(final)
 if __name__ == "__main__":
     main()
