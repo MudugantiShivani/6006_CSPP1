@@ -13,7 +13,6 @@ def main():
     final = 1
     if int_input ==0:
         print(int_input)
-    break
     elif int_input > 0:
         while int_input > 1:
             rem = int_input%10
