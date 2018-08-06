@@ -31,14 +31,14 @@ annual interest rate and monthly payable rate
 # Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
 # Updated balance each month = (Monthly unpaid balance) +
 #(Monthly interest rate x Monthly unpaid balance)
-def paying_balance(balance, annual_interest_rate, monthly_paymentRate):
+def paying_balance(balance, annual_interest_rate, monthly_paymentrate):
     """
     here we give the input as balance,annual interest rate and monthly payment rate
     and it will return the balance
     """
     month = 1
     while month < 13:
-        balance = balance - (monthly_paymentRate * balance)
+        balance = balance - (monthly_paymentrate * balance)
         balance = balance + (annual_interest_rate / 12 * balance)
         month = month + 1
     return round(balance, 2)
