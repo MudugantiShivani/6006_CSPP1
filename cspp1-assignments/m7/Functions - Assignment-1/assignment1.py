@@ -31,11 +31,11 @@ annual interest rate and monthly payable rate
 # Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
 # Updated balance each month = (Monthly unpaid balance) +
 #(Monthly interest rate x Monthly unpaid balance)
-def payingDebtOffInAYear(balance, annual_interest_rate, monthly_paymentRate):
+def paying_DebtOffInAYear(balance, annual_interest_rate, monthly_paymentRate):
     """
     here we give the input as balance,annual interest rate and monthly payment rate
     and it will return the balance
-    """ 
+    """
     month = 1
     while month < 13:
         balance = balance - (monthly_paymentRate * balance)
@@ -53,4 +53,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
