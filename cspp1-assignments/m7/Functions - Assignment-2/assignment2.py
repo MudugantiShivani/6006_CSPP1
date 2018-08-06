@@ -21,6 +21,9 @@ def payingdebt_offinayear(Previous_balance, Annual_interestrate):
 	flag = 1
 	mon_cnt = 0
 	monthly_interestrate = (Annual_interestrate) / 12.0
+	if Previous_balance < 0:
+		flag = 0
+		Minimumfixed_monthlypayment = 0
 	while flag:
 		mon_cnt += 1
 		monthly_unpaidbalance = (Previous_balance) - (Minimumfixed_monthlypayment)
