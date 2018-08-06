@@ -26,27 +26,27 @@
 
 
 def payingDebtOffInAYear(balance, annual_interest_rate, monthlyPaymentRate):
-	"""
-	here we give the input as balance,annual interest rate and monthly payment rate
-	and it will return the balance
-	"""	
-		
-	month = 1
-	while month < 13:
-		balance = balance - (monthlyPaymentRate * balance)
-		balance = balance + (annual_interest_rate / 12 * balance)
-		month = month + 1
-	return round(balance, 2)
+    """
+    here we give the input as balance,annual interest rate and monthly payment rate
+    and it will return the balance
+    """ 
+        
+    month = 1
+    while month < 13:
+        balance = balance - (monthlyPaymentRate * balance)
+        balance = balance + (annual_interest_rate / 12 * balance)
+        month = month + 1
+    return round(balance, 2)
 
 def main():
-	"""
-	here we import the function and prints the balance
-	"""
-	data = input()
-	data = data.split(' ')
-	data = list(map(float, data))
-	print(payingDebtOffInAYear(data[0],data[1],data[2]))
+    """
+    here we import the function and prints the balance
+    """
+    data = input()
+    data = data.split(' ')
+    data = list(map(float, data))
+    print(payingDebtOffInAYear(data[0],data[1],data[2]))
 
-if __name__== "__main__":
-	main()
+if __name__ == "__main__":
+    main()
 
