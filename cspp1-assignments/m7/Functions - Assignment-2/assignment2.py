@@ -14,7 +14,10 @@
 # Assume that the interest is compounded monthly according to
 #the balance at the end of the month (after the payment for that month is
 # made).
-
+ '''
+    this programe takes the inputs and outputs min required amout for credit card paymtnt
+    
+    '''
 def payingdebt_offinayear(previous_balance, annual_interestrate):
     '''
     Here we will give the previous balance and annual interest rate to
@@ -46,7 +49,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Lowest Payment:",payingdebt_offinayear(data[0], data[1]))
+    print("Lowest Payment:", payingdebt_offinayear(data[0], data[1]))
 if __name__ == "__main__":
     main()
     
