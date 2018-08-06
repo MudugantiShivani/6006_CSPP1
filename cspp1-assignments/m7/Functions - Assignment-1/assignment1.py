@@ -1,3 +1,7 @@
+'''
+in this program we write a function where it takes the balance and
+annual interest rate and monthly payable rate
+'''
 # Functions | Assignment-1 - Paying Debt off in a Year
 
 # Write a program to calculate the credit card balance after one year if
@@ -25,7 +29,7 @@
 # Monthly interest rate= (Annual interest rate) / 12.0
 # Minimum monthly payment = (Minimum monthly payment rate) x (Previous balance)
 # Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
-# Updated balance each month = (Monthly unpaid balance) + 
+# Updated balance each month = (Monthly unpaid balance) +
 #(Monthly interest rate x Monthly unpaid balance)
 def payingDebtOffInAYear(balance, annual_interest_rate, monthly_paymentRate):
     """
