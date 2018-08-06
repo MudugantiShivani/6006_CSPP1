@@ -1,7 +1,11 @@
 '''
-# Write a program that uses these bounds and bisection search (for more info check out the Wikipedia page on bisection search) to find
-# the smallest monthly payment to the cent (no more multiples of $10) such that we can pay off the debt within a year. Try it out with
-# large inputs, and notice how fast it is (try the same large inputs in your solution to Problem 2 to compare!). Produce the same return
+# Write a program that uses these bounds and bisection search
+(for more info check out the Wikipedia page on bisection search) to find
+# the smallest monthly payment to the cent (no more multiples of $10)
+such that we can pay off the debt within a year. Try it out with
+# large inputs, and notice how fast it is
+(try the same large inputs in your solution to Problem 2 to compare!).
+Produce the same return
 # value as you did in Assignment 2.
 '''
 def payingdebt_offinayear(balance_in, annual_interestrate):
@@ -10,7 +14,7 @@ def payingdebt_offinayear(balance_in, annual_interestrate):
     '''
     init_balance = balance_in
     moninterest_rate = annual_interestrate/12
-    low_i=init_balance/12
+    low_i = init_balance/12
     up_i = (init_balance * (1+ moninterest_rate)**12)/12.0
     epsilon = 0.03
     while abs(balance_in) > epsilon:
@@ -34,7 +38,6 @@ def main():
     # data = "4773 0.2"
     data = data.split(' ')
     data = list(map(float, data))
-    print("Lowest Payment:", payingdebt_offinayear(data[0],data[1]))
-    
-if __name__== "__main__":
+    print("Lowest Payment:", payingdebt_offinayear(data[0], data[1]))
+if __name__ == "__main__":
     main()
