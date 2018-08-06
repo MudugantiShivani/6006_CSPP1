@@ -31,7 +31,7 @@ annual interest rate and monthly payable rate
 # Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
 # Updated balance each month = (Monthly unpaid balance) +
 #(Monthly interest rate x Monthly unpaid balance)
-def paying_deboOffinayear(balance, annual_interest_rate, monthly_paymentRate):
+def paying_balance(balance, annual_interest_rate, monthly_paymentRate):
     """
     here we give the input as balance,annual interest rate and monthly payment rate
     and it will return the balance
@@ -49,7 +49,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Remaining balance: ",paying_debtoffinayear(data[0], data[1], data[2]))
+    print("Remaining balance: ",paying_balance(data[0], data[1], data[2]))
 
 if __name__ == "__main__":
     main()
