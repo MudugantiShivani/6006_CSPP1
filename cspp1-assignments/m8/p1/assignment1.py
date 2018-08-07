@@ -9,7 +9,7 @@ def factorial(num_in):
     input:n is positive Integer
     returns: a positive integer, the factorial of n.
     '''
-    if num_in == 1 or num_in == 0:
+    if num_in in (1,0):
         return 1
     else:
         return num_in * factorial(num_in-1)
