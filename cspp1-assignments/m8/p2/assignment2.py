@@ -14,13 +14,9 @@ def sumofdigits(n):
     if n == 0:
     	return 0
     return (n%10 + sumofdigits(n//10))
-    
-
-
 def main():
     n = input()
     print(sumofdigits(int(n)))  
-
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
 
