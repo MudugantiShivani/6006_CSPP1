@@ -11,7 +11,7 @@ def factorial(num_in):
     '''
     if num_in in (1, 0):
         return 1
-        return num_in * factorial(num_in-1)
+    return num_in * factorial(num_in-1)
 def main():
     """
     here the input will be a number which is positive and returns the factorial
