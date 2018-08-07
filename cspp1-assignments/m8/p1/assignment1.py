@@ -18,7 +18,7 @@ def main():
     here the input will be a number which is positive and returns the factorial
     of the given number
     """
-    a = input()
-    print(factorial(int(a)))
+    num_in = input()
+    print(factorial(int(num_in)))
 if __name__ == "__main__":
     main()
