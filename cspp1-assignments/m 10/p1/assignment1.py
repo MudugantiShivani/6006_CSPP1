@@ -6,7 +6,7 @@ that is comprised of lowercase English letters - all lowercase English letters
 that are not in letters_guessed
 '''
 import string
-alphabets = string.ascii_lowercase
+Alphabets = string.ascii_lowercase
 def get_available_letters(letters_guessed):
     '''
     :param letters_guessed: list, what letters have been guessed so far
@@ -14,15 +14,10 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     answer = []
-    for letter_given in alphabets:
-    	if letter_given not in letters_guessed:
-    		answer.append(letter_given)
+    for letter_given in Alphabets:
+        if letter_given not in letters_guessed:
+            answer.append(letter_given)
     return ''.join(answer)
-
-    
-
-
-
 def main():
     '''
     Main function for the given program
