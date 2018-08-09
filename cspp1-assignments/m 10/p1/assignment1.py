@@ -14,7 +14,7 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     answer = []
-    for letter_given in ALPHABETS:
+    for letter_given in ALPHA_BETS:
         if letter_given not in letters_guessed:
             answer.append(letter_given)
     return ''.join(answer)
