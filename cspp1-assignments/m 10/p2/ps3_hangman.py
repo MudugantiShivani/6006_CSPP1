@@ -1,11 +1,5 @@
-'''
-Exercise : Assignment-2
-implement the function hangman, which takes one parameter - the secretWord 
-the user is to guess. This starts up an interactive game of Hangman between 
-the user and the computer. Be sure you take advantage of the three helper functions, 
-isWordGuessed, getGuessedWord, and getAvailableLetters, 
-that you've defined in the previous part.
-'''
+# Hangman game
+#
 
 # -----------------------------------
 # Helper code
@@ -48,6 +42,7 @@ def chooseWord(wordlist):
 # Load the list of words into the variable wordlist
 # so that it can be accessed from anywhere in the program
 wordlist = loadWords()
+
 def isWordGuessed(secretWord, lettersGuessed):
     '''
     secretWord: string, the word the user is guessing
@@ -56,12 +51,10 @@ def isWordGuessed(secretWord, lettersGuessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
-    i = 0
-    if lettersGuessed[i] in secretWord:
-        return True
-    else:
-        return False
-    
+    for m_input in secret_word:
+        if m_input not in letters_guessed:
+            return False
+    return True
 
 
 
@@ -74,17 +67,16 @@ def getGuessedWord(secretWord, lettersGuessed):
     '''
     # FILL IN YOUR CODE HERE...
     s_str = ""
-    for m_input in secretWord:
-        if m_input not in lettersGuessed:
+    for m_input in secret_word:
+        if m_input not in letters_guessed:
             s_str = s_str + "_"
         else:
             s_str = s_str+m_input
     return s_str
 
 
-import string
-ALPHA_BETS = string.ascii_lowercase
-def getAvailableLetters(letters_guessed):
+
+def getAvailableLetters(lettersGuessed):
     '''
     lettersGuessed: list, what letters have been guessed so far
     returns: string, comprised of letters that represents what letters have not
@@ -96,6 +88,7 @@ def getAvailableLetters(letters_guessed):
         if letter_given not in letters_guessed:
             answer.append(letter_given)
     return ''.join(answer)
+    
 
 def hangman(secretWord):
     '''
@@ -120,16 +113,15 @@ def hangman(secretWord):
     # FILL IN YOUR CODE HERE...
     print("Welcome to the game, Hangman!")
     print("I am thinking of a word that is " + str(len(secretWord)) + "letters long.")
-    guesschances = 8
+    guesschances = 0
     won = 0
     guessedletters = []
-    while guesschances > 0 and won!= 1:
+    while guesschances < 8 and won!= 1:
         print("----------------------------")
-        print("available letters", getAvailableLetters(guessedletters))
-        print("chances left", guesschances)
-        l =list(input("guess a letter please: "))
+        print("avanilable letters", getAvailableLetters(guessedletters))
+        l =list(input("guess a letter please"))
         if l[0] in guessedletters:
-            print("Oops! You have already guessed that letter:",getGuessedWord(secretWord, guessedletters))
+            print("Oops! You've already guessed that letter:",getGuessedWord(secretWord, guessedletters))
         else:
             guessedletters = guessedletters + l
             if isWordGuessed(secretWord, l) == True:
@@ -138,28 +130,9 @@ def hangman(secretWord):
                     won = 1
             else:
                 print("Oops! That letter is not in my word: ",getGuessedWord(secretWord, guessedletters))
-                guesschances = guesschances - 1
+                guesschances = guesschances + 1
     if won == 1:
         print("you won")
     else:
         print("Sorry, you ran out of guesses. The word was : ", secretWord)
 
-    
-
-
-
-def main():
-    '''
-    Main function for the given program
-    
-    When you've completed your hangman function, uncomment these two lines
-    and run this file to test! (hint: you might want to pick your own
-    secretWord while you're testing)
-    '''
-    secretWord = chooseWord(wordlist).lower()
-    
-    hangman(secretWord)
-
-
-if __name__ == "__main__":
-    main()
