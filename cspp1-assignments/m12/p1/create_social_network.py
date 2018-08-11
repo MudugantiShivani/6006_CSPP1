@@ -48,6 +48,6 @@ def main():
             data[l_len[0]] = [l_len[1]]
         else:
             data[l_len[0]].append(l_len[1])
-    print(create_social_network(data))
+    print({})
 if __name__ == "__main__":
     main()
