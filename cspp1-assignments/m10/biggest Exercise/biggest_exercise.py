@@ -22,7 +22,7 @@ def biggest(aDict):
             collect = a
 
 
-    return str(collect)
+    return aDict
     
 
 def main():
@@ -30,12 +30,12 @@ def main():
 	aDict={}
 	for i in range(int(n)):
 		s=input()
-		l=s.split()
+		l=s.split('follows')
 		if l[0][0] not in aDict:
 			aDict[l[0][0]]=[l[1]]
 		else:
 			aDict[l[0][0]].append(l[1])
-	print(biggest(aDict))
+	print(aDict)
 
 if __name__== "__main__":
     main()
