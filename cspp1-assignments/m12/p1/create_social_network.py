@@ -34,24 +34,21 @@ def create_social_network(data):
     cnt = 0
     for i in data:
     	cnt += len(data[i])
-    return data  
-
+    return data
 def main():
 	'''
 	main function is written here
 	'''
-	n=input()
-	data={}
+	n = input()
+	data = {}
 	for i in range(int(n)):
-		s=input()
-		l=s.split('/n')
-		l=s.split('follows')
+		s = input()
+		l = s.split('/n')
+		l = s.split('follows')
 		if l[0] not in data:
-			data[l[0]]=[l[1]]
+			data[l[0]] = [l[1]]
 		else:
 			data[l[0]].append(l[1])
 	print(create_social_network(data))
-
-
 if __name__ == "__main__":
     main()
