@@ -39,9 +39,9 @@ def main():
     '''
     main function is written here
     '''
-    n = input()
+    n_input = input()
     data = {}
-    for input_i in range(int(n)):
+    for input_i in range(int(n_input)):
         s_string = input()
         l_len = s_string.split('follows')
         if l_len[0] not in data:
