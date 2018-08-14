@@ -28,8 +28,8 @@ def is_flush(hand):
     '''
     set_i = set()
     for face, suite in hand:
-    	set_i.add(suite)
-    return len(set_i) ==1
+        set_i.add(suite)
+    return len(set_i) == 1
 
 def hand_rank(hand):
     '''
@@ -56,11 +56,11 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_flush(hand) and is_straight(hand):
-    	return 3
+        return 3
     if is_flush(hand) :
-    	return 2
+        return 2
     if is_straight(hand):
-    	return 1
+        return 1
     return 0
 
 def poker(hands):
