@@ -241,19 +241,7 @@ def poker(hands):
     #             if rank_dict[i][0] == max_rank:
     #                 ans_dict = i
     #
-    '''            --------------------------------
-    max_rank_new = 0
-    high_card_new = 0
-    ans_hand = 0
-    for rank_iter in range(len(rank_dict)):
-        if max_rank_new < rank_dict[rank_iter][0] and high_card_new < rank_dict[rank_iter][1]:
-            max_rank_new = rank_dict[rank_iter][0]
-            high_card_new = rank_dict[rank_iter][1]
-            ans_hand = rank_iter
-    print(HANDS[ans_hand])
-    '''
-    # print( / key)
-    # print("Count of max ranks", dict_count)
+   
     return max(hands, key=hand_rank)
 
 
