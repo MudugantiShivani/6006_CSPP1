@@ -70,8 +70,8 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     suit = hand[0][1]
-    for suit_hand in range(5):
-        if suit != hand[suit_hand][1]:
+    for suit_inhand in range(5):
+        if suit != hand[suit_inhand][1]:
             return False
     return True
 def is_four_kind(hand):
@@ -131,11 +131,11 @@ def is_two_pair(hand):
     hand_copy = val_to_num(hand)
     pair_count = 0
     for i in range(5):
-        list_count = hand_copy.count(hand_copy[i])
-        if list_count == 2:
-            pair_count += 1
+        list_cnt = hand_copy.count(hand_copy[i])
+        if list_cnt == 2:
+            pair_cnt += 1
 
-    if pair_count == 2:
+    if pair_cnt == 2:
         return True
     return False
 
