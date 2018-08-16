@@ -74,7 +74,6 @@ def is_flush(hand):
         if suit != hand[suit_hand][1]:
             return False
     return True
-    
 def is_four_kind(hand):
     '''
     This function returns a boolean value
