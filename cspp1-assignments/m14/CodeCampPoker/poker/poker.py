@@ -9,21 +9,21 @@ def val_to_num(hand):
     """
     This function Converts the Face Card values to a Precedence
     """
-    copyof_hand = hand.copy()
+    new_hand = hand.copy()
     for ele in range(5):
-        if copyof_hand[ele][0] == "T":
-            copyof_hand[ele] = 10
-        elif copyof_hand[ele][0] == "J":
-            copyof_hand[ele] = 11
-        elif copyof_hand[ele][0] == "Q":
-            copyof_hand[ele] = 12
-        elif copyof_hand[ele][0] == "K":
-            copyof_hand[ele] = 13
-        elif copyof_hand[ele][0] == "A":
-            copyof_hand[ele] = 14
+        if new_hand[ele][0] == "T":
+            new_hand[ele] = 10
+        elif new_hand[ele][0] == "J":
+            new_hand[ele] = 11
+        elif new_hand[ele][0] == "Q":
+            new_hand[ele] = 12
+        elif new_hand[ele][0] == "K":
+            new_hand[ele] = 13
+        elif new_hand[ele][0] == "A":
+            new_hand[ele] = 14
         else:
-            copyof_hand[ele] = int(copyof_hand[ele][0])
-    return copyof_hand
+            new_hand[ele] = int(new_hand[ele][0])
+    return new_hand
 
 
 def is_royal_flush(hand):
@@ -31,15 +31,17 @@ def is_royal_flush(hand):
     This function returns a boolean value
     Returns : True if Hand is a Royal Flush
     """
+    # print("rayal fun entered with hand", hand)
     if is_flush(hand) and is_straight(hand):
-        
+        # print("royal if passed with hand", hand)
         check_hand = val_to_num(hand)
         check_hand = sorted(check_hand)
         royal_list = [10, 11, 12, 13, 14]
         for each_val in royal_list:
             if each_val not in check_hand:
-                
+                # print("Returining royal-flush false with hand", hand)
                 return False
+        # print("Returining royal-flush True with hand", hand)
         return True
     return False
 
@@ -56,10 +58,13 @@ def is_straight(hand):
     '''
 
     sorted_hand = sorted(val_to_num(hand))
-    
+    # sorted_hand = [h_value for h_value in sorted_hand]
     for i in range(4):
+        # print("new_hand[i]", sorted_hand[i], "new_hand [i+1]", sorted_hand[i + 1])
         if sorted_hand[i] != sorted_hand[i + 1] - 1:
+            # print("Returning STratght FALSE with hand", hand)
             return False
+    # print("Returning STratght TRUE with hand", hand)
     return True
 
 
@@ -72,13 +77,15 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    
+    # print("Flush called list", hand)
     suit = hand[0][1]
     for suit_hand in range(5):
         if suit != hand[suit_hand][1]:
+            # print("Returning FLUSH FALSE with hand", hand, "\n")
             return False
+    # print("Returning FLUSH TRUE with hand", hand, "\n")
     return True
-    
+    # print("here", hand[0][1])
 
 
 def is_four_kind(hand):
@@ -153,6 +160,7 @@ def high_card(hand):
     Returns : Returns a max value or High Card
     '''
     new_hand = val_to_num(hand)
+    # print()
     return max(new_hand)
 
 
@@ -183,23 +191,33 @@ def hand_rank(hand):
 
     rank = 0
     if is_royal_flush(hand):
-       rank = 9
+        # print("Its a Royal Flush")
+        rank = 9
     elif is_flush(hand) and is_straight(hand):
+        # print("Its a is_flush")
         rank = 8
     elif is_four_kind(hand):
+        # print("Its a is_four_kind ")
         rank = 7
     elif is_fullhouse(hand):
+        # print("Its a is_fullhouse ")
         rank = 6
     elif is_flush(hand):
+        # print("Its a is_flush ")
         rank = 5
     elif is_straight(hand):
+        # print("Its a is_straight ")
         rank = 4
     elif is_three_kind(hand):
+        # print("Its a is_three_kind ")
         rank = 3
     elif is_two_pair(hand):
+        # print("Its a is_two_pair ")
         rank = 2
     elif is_one_pair(hand):
+        # print("Its a is_one_pair ")
         rank = 1
+    # print("asdasd")
     high_val = high_card(hand)
     return (rank, high_val)
 
