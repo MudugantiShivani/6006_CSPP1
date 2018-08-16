@@ -32,13 +32,11 @@ def is_royal_flush(hand):
     Returns : True if Hand is a Royal Flush
     """
     if is_flush(hand) and is_straight(hand):
-        
         check_hand = val_to_num(hand)
         check_hand = sorted(check_hand)
         royal_list = [10, 11, 12, 13, 14]
         for each_val in royal_list:
             if each_val not in check_hand:
-                
                 return False
         return True
     return False
@@ -56,7 +54,6 @@ def is_straight(hand):
     '''
 
     sorted_hand = sorted(val_to_num(hand))
-    
     for i in range(4):
         if sorted_hand[i] != sorted_hand[i + 1] - 1:
             return False
@@ -72,15 +69,11 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    
     suit = hand[0][1]
     for suit_hand in range(5):
         if suit != hand[suit_hand][1]:
             return False
     return True
-    
-
-
 def is_four_kind(hand):
     '''
     This function returns a boolean value
@@ -183,7 +176,7 @@ def hand_rank(hand):
 
     rank = 0
     if is_royal_flush(hand):
-       rank = 9
+        rank = 9
     elif is_flush(hand) and is_straight(hand):
         rank = 8
     elif is_four_kind(hand):
@@ -243,8 +236,6 @@ def poker(hands):
     #
    
     return max(hands, key=hand_rank)
-
-
 if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
