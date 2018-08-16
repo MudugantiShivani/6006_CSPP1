@@ -129,7 +129,7 @@ def is_two_pair(hand):
     Returns : True if Hand has two pair
     '''
     hand_copy = val_to_num(hand)
-    pair_count = 0
+    pair_cnt = 0
     for i in range(5):
         list_cnt = hand_copy.count(hand_copy[i])
         if list_cnt == 2:
