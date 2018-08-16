@@ -32,7 +32,7 @@ def is_royal_flush(hand):
     Returns : True if Hand is a Royal Flush
     """
     if is_flush(hand) and is_straight(hand):
-        check_hand = val_num(hand)
+        check_hand = val_to_num(hand)
         check_hand = sorted(check_hand)
         royal_list = [10, 11, 12, 13, 14]
         for eachval_inlist in royal_list:
