@@ -234,7 +234,6 @@ def poker(hands):
     #             if rank_dict[i][0] == max_rank:
     #                 ans_dict = i
     #
-    
     return max(hands, key=hand_rank)
 
 
