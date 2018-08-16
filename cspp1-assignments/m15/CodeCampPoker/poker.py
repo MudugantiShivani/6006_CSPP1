@@ -176,7 +176,7 @@ def hand_rank(hand):
 
     rank = 0
     if is_royal_flush(hand):
-       rank = 9
+        rank = 9
     elif is_flush(hand) and is_straight(hand):
         rank = 8
     elif is_four_kind(hand):
