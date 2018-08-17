@@ -32,8 +32,8 @@ def similarity(dict1, dict2):
     for key in tempdict2:
         frequencyof_words[key][1] = tempdict2[key]
     for key in frequencyof_words:
-        sum_in_numerator = sum_in_numerator + (frequencyof_words[key][0] * frequencyof_words[key][1])
-    numerator = sum_in_numerator
+        sum_numerator = sum_numerator + (frequencyof_words[key][0] * frequencyof_words[key][1])
+    numerator = sum_numerator
     for key in frequencyof_words:
         sumofdict1 = sumofdict1 + (frequencyof_words[key][0]**2)
         sumofdict2 = sumofdict2 + (frequencyof_words[key][1]**2)
