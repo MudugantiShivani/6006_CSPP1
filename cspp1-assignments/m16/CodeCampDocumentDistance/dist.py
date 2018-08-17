@@ -10,7 +10,7 @@ def similarity(dict1, dict2):
     '''
     tempdict1 = {}
     tempdict2 = {}
-    sum_in_numerator = 0
+    sum_numerator = 0
     sumofdict1 = 0
     sumofdict2 = 0
     for word in dict1:
