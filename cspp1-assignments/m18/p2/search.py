@@ -49,7 +49,9 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    return search_index
+    
+
+    
 def main():
     '''
         main function
@@ -67,7 +69,7 @@ def main():
 
     # call process queries
     process_queries(search_index, queries)
-STOP_WORDS = load_stopwords(FILENAME)
+
 
 if __name__ == '__main__':
     main()
