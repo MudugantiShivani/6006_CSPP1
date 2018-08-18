@@ -66,7 +66,7 @@ def build_search_index(docs):
         listof_cleanwords.append(word_list(seperate_line))
     for indexof_line, seperate_line in enumerate(listof_cleanwords):
         for word in seperate_line:
-            if word not in STOP_WORDS:
+            if word not in STOP_WORDs:
                 if word not in search_index:
                     word_count = seperate_line.count(word)
                     search_index[word] = [(indexof_line, word_count)]
@@ -106,6 +106,6 @@ def main():
 
     # call print to display the search index
     print_search_index(build_search_index(documents))
-STOP_WORDS = load_stopwords(FILENAME)
+STOP_WORDs = load_stopwords(FILENAME)
 if __name__ == '__main__':
     main()
