@@ -28,7 +28,7 @@
 
     Note: PyLint score need not be 10/10. Anything above 9.5 is good.
 '''
-
+FILENAME = "stopwords.txt"
 def search(search_index, query):
     '''
         function to search through the search index and return the results
@@ -49,6 +49,7 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
+    return search_index
 def main():
     '''
         main function
@@ -66,6 +67,7 @@ def main():
 
     # call process queries
     process_queries(search_index, queries)
+STOP_WORDS = load_stopwords(FILENAME)
 
 if __name__ == '__main__':
     main()
