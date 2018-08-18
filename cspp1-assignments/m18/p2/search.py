@@ -37,6 +37,11 @@ def search(search_index, query):
         collect all the values for the words that are in the search_index
         make a set of doc_id and return
     '''
+    query = input().lower()
+    if word in search_index:
+        temp_list = [word]
+    return word
+
 def process_queries(search_index, queries):
     '''
         function to process the search queries
@@ -63,4 +68,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
