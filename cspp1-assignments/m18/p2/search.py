@@ -38,6 +38,7 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     query = input().lower()
+    word = []
     if word in search_index:
         temp_list = [word]
     return word
