@@ -41,7 +41,7 @@ def search(search_index, query):
     word = []
     if word in search_index:
         temp_list = [word]
-    return word
+    return search_index
 
 def process_queries(search_index, queries):
     '''
