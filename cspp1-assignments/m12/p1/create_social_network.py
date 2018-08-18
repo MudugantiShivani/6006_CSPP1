@@ -44,10 +44,10 @@ def main():
     for n_input in range(int(n_input)):
         s_string = input()
         l_len = s_string.split('follows')
-        if l_len[0] not in data:
-            data[l_len[0]] = [l_len[1]]
+        if l_len not in data:
+            data[l_len] = [l_len]
         else:
-            data[l_len[0]].append(l_len[1])
+            data[l_len].append(l_len)
     print(create_social_network(data))
 if __name__ == "__main__":
     main()
