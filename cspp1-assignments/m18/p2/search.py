@@ -40,7 +40,7 @@ def search(search_index, query):
     query = input().lower()
     word = []
     if word in search_index:
-        
+        temp_list = [word]
     return search_index
 
 def process_queries(search_index, queries):
