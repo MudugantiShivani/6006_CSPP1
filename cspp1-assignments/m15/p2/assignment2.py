@@ -266,7 +266,7 @@ def decrypt_story():
     '''
     # pass #delete this line when you write your code.
     decrypt_object = CiphertextMessage(get_story_string())
-    ans= decrypt_object.decrypt_message()
+    ans = decrypt_object.decrypt_message()
     return ans
 
 ### DO NOT MODIFY THIS METHOD ###
