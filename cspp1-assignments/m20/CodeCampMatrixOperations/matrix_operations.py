@@ -1,4 +1,7 @@
 from copy import deepcopy
+'''
+In this program we perform matrix multiplication and addition
+'''
 def mult_matrix(m_1, m_2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -43,17 +46,20 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    r, c = list(map(int, input() . split(',')))
+    row_matrix, column_matrix = list(map(int, input() . split(',')))
     matrix = []
-    for i in range(r):
+    for i in range(row_matrix):
         row = list(map(int, input() . split(' ')))
-        if len(row) != c:
+        if len(row) != column_matrix:
             print("Error: Invalid input for the matrix")
             return None
         matrix.append(row)
     return matrix
 
 def main():
+    '''
+    here we define the main function of the program
+    '''
     # read matrix 1
     matrix1 = read_matrix()
     if not matrix1:
@@ -65,10 +71,10 @@ def main():
         return
 
     # add matrix 1 and matrix 2
-    res = add_matrix(matrix1,matrix2)
+    res = add_matrix(matrix1, matrix2)
     print(res)
     # multiply matrix 1 and matrix 2
-    res = mult_matrix(matrix1,matrix2)
+    res = mult_matrix(matrix1, matrix2)
     print(res)
 if __name__ == '__main__':
     main()
