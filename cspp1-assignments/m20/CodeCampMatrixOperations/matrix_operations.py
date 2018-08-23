@@ -1,5 +1,5 @@
 from copy import deepcopy
-def mult_matrix(m1, m2):
+def mult_matrix(m_1, m_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -7,19 +7,19 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if len(m1[0]) != len(m2):
+    if len(m_1[0]) != len(m_2):
         print("Error: Matrix shapes invalid for mult")
         return None
     res = []
-    for i in range(len(m1)):
+    for i in range(len(m_1)):
         row = []
-        for j in range(len(m2[0])):
-            row.append(sum([m1[i][k]*m2[k][j] for k in range(len(m1[0]))]))
+        for j in range(len(m_2[0])):
+            row.append(sum([m_1[i][k]*m_2[k][j] for k in range(len(m_1[0]))]))
         res.append(row)
     return res
 
 
-def add_matrix(m1, m2):
+def add_matrix(m_1, m_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -27,13 +27,13 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if len(m1) != len(m2) or len(m1[0]) != len(m2[0]):
+    if len(m_1) != len(m_2) or len(m_1[0]) != len(m_2[0]):
         print("Error: Matrix shapes invalid for addition")
         return None
-    res = deepcopy(m1)
-    for i in range(len(m1)):
-        for j in range(len(m1[0])):
-            res[i][j] += m2[i][j]
+    res = deepcopy(m_1)
+    for i in range(len(m_1)):
+        for j in range(len(m_1[0])):
+            res[i][j] += m_2[i][j]
     return res
 def read_matrix():
     '''
@@ -62,15 +62,13 @@ def main():
     # read matrix 2
     matrix2 = read_matrix()
     if not matrix2:
-        return 
+        return
 
     # add matrix 1 and matrix 2
-    res = add_matrix(matrix1 , matrix2)
+    res = add_matrix(matrix1,matrix2)
     print(res)
     # multiply matrix 1 and matrix 2
-    res = mult_matrix(matrix1 , matrix2)
+    res = mult_matrix(matrix1,matrix2)
     print(res)
-    
-
 if __name__ == '__main__':
     main()
