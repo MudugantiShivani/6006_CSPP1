@@ -1,7 +1,8 @@
-from copy import deepcopy
 '''
 In this program we perform matrix multiplication and addition
 '''
+from copy import deepcopy
+
 def mult_matrix(m_1, m_2):
     '''
         check if the matrix1 columns = matrix2 rows
