@@ -1,5 +1,6 @@
 '''
-    tictactoe game possibilities has to be checked and return the winner or invalid input or invalid game or draw
+    tictactoe game possibilities has to be checked and return
+    the winner or invalid input or invalid game or draw
 '''
 def tictactoe(game):
     '''
