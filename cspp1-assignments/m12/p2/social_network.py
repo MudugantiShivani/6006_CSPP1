@@ -18,7 +18,7 @@ def follow(network, arg1, arg2):
         network[arg1].append(arg2)
     else:
         network[arg1] = [arg2]
-    return network 
+    return network
 
 def unfollow(network, arg1, arg2):
     '''
@@ -57,7 +57,7 @@ def main():
     '''
         handling testcase input and printing output
     '''
-    network = eval(input())
+    network = (input())
     lines = int(input())
     for i in range(lines):
         i += 1
