@@ -45,8 +45,6 @@ def search(search_index, query):
             list1_index.append(search_index[element])
     return list1_index
 
-    
-
 def process_queries(search_index, queries):
     '''
         function to process the search queries
@@ -56,7 +54,7 @@ def process_queries(search_index, queries):
     dictionary_of_indexes = {}
     final_ans = []
     for each_line in queries:
-        dictionary_of_indexes = search(search_index , each_line)
+        dictionary_of_indexes = search(search_index, each_line)
         final_ans = []
         for word in dictionary_of_indexes:
             for index in range(len(word)):
@@ -72,7 +70,6 @@ def main():
 
     # read the number of search queries
     lines = int(input())
-    
     # read the search queries into a list
     queries = []
     for i in range(lines):
@@ -84,3 +81,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
