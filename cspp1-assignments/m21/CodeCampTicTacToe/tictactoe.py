@@ -54,10 +54,10 @@ def main():
                 count_o += 1
     if flag == 0:
         print("invalid input")
-    elif count_x > 5 or count_o > 5:
+    elif count_x or count_o >5:
         print("invalid game")
     else:
-        print(mat(tictac))
+        print(tictactoe(tictac))
 if __name__ == '__main__':
     main()
 
