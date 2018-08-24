@@ -31,23 +31,31 @@ def create_social_network(data):
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
-    cnt_string = 0
-    for input_i in data:
-        cnt_string += len(data[input_i])
-    return data
+    friends_network = {}
+    file = data.split("\n")
+    file.pop()
+    for each_line in file:
+        element = each_line.split()
+        if element[1] == "follows":
+            element.pop(1)
+        else:
+            friends_network = {}
+            break
+        friends_network[element[0]] = element[1].split(",")
+    return friends_network
+
+
 def main():
     '''
     main function is written here
     '''
-    n_input = input()
-    data = {}
-    for n_input in range(int(n_input)):
-        s_string = input()
-        l_len = s_string.split('follows')
-        if l_len not in data:
-            data[l_len] = [l_len]
-        else:
-            data[l_len].append(l_len)
-    print(create_social_network(data))
+    string = ''
+    lines = int(input())
+    for i in range(lines):
+        i += 1
+        string += input()
+        string += '\n'
+
+    print(create_social_network(string))
 if __name__ == "__main__":
     main()
