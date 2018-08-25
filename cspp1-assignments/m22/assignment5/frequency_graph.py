@@ -7,11 +7,10 @@ def frequency_graph(dictionary):
 
     newdict = sorted(dictionary.keys())
     for element in newdict:
-        print(element, '-',"#" * dictionary[element])
+        print(element, '-', "#" * dictionary[element])
 
 def main():
-	
-    dictionary = eval(input())
+	dictionary = eval(input())
     frequency_graph(dictionary)
 
 if __name__ == '__main__':
