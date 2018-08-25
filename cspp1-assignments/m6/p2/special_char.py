@@ -9,8 +9,9 @@ def main():
     '''
     string = input()
     for char_i in string:
-        if char_i in('!', '@', '#', '$', '%', '^', '&', '*'):
-            string = string.replace(char_i, " ")
+        if char_i in('!', '@', '#', '$', '%', '^', '&', '*', '.', ' '):
+        	string = string.replace(char_i, "")
+        	
     print(string)
 if __name__ == "__main__":
     main()
