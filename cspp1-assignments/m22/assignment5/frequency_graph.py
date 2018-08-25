@@ -4,9 +4,18 @@ frequency of each word. Display the frequency values using “#” as a text bas
 '''
 
 def frequency_graph(dictionary):
-    pass
+	'''
+	In this problem we read the given dictionary and count the repetition
+	of words and replaces the count with count number of "#"
+	'''
+    newdict = sorted(dictionary.keys())
+    for element in newdict:
+        print(element, '-',"#" * dictionary[element])
 
 def main():
+	'''
+	This is the main function of the program
+	'''
     dictionary = eval(input())
     frequency_graph(dictionary)
 
