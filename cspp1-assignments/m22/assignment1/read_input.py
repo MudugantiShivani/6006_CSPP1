@@ -3,6 +3,9 @@ Write a python program to read multiple lines of text input and store the input 
 '''
 
 def main():
+    '''
+    Here we read the given file and print the file
+    '''
     file_input = input()
     for i in  range(int(file_input)):
         data = input()
