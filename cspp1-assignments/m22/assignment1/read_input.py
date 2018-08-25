@@ -7,7 +7,7 @@ def main():
     Here we read the given file and print the file
     '''
     file_input = input()
-    for i in  range(int(file_input)):
+    for data in  range(int(file_input)):
         data = input()
         print(data)
 if __name__ == '__main__':
