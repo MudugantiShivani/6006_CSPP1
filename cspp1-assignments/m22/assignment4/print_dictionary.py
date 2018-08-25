@@ -5,10 +5,17 @@ the key and frequency with a SPACE - SPACE.
 '''
 
 def print_dictionary(dictionary):
+    '''
+    In this function we read the given dictionary and sort it according to
+    the keys and frequency and print the key and frequency
+    '''
     newdict = sorted(dictionary.keys())
     for element in newdict:
-    	print(element, '-' , dictionary[element])
+        print(element, '-', dictionary[element])
 def main():
+    '''
+    Thuis is the main function which we call to execute the progfram
+    '''
     dictionary = eval(input())
     print_dictionary(dictionary)
 
